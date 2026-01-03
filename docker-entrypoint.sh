@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-# Create .env file from environment variables if it doesn't exist
+# Create .env file from environment variables
 if [ ! -f /var/www/html/.env ]; then
     echo "Creating .env file..."
     cat > /var/www/html/.env << EOF
@@ -20,29 +20,24 @@ SESSION_DRIVER=cookie
 CACHE_DRIVER=file
 QUEUE_CONNECTION=sync
 EOF
-    echo ".env file created!"
 fi
 
-# Create SQLite database directory and file
+# Create SQLite database
 mkdir -p /var/data
 touch /var/data/database.sqlite
 chmod 777 /var/data/database.sqlite
 
 # Generate app key if not set
-if [ -z "$APP_KEY" ] || [ "$APP_KEY" = "" ]; then
-    echo "Generating APP_KEY..."
+if [ -z "$APP_KEY" ]; then
     php artisan key:generate --force
 fi
 
-# Cache configuration
+# Cache and migrate
 php artisan config:cache
 php artisan route:cache
 php artisan view:cache
-
-# Run migrations
 php artisan migrate --force
-
-# Create storage link
 php artisan storage:link || true
 
-exec "$@"
+# Start PHP built-in server on Railway's PORT
+exec php artisan serve --host=0.0.0.0 --port=${PORT:-8080}
