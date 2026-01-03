@@ -1,6 +1,11 @@
 #!/bin/bash
 set -e
 
+# Create SQLite database directory and file
+mkdir -p /var/data
+touch /var/data/database.sqlite
+chmod 777 /var/data/database.sqlite
+
 # Generate app key if not set
 if [ -z "$APP_KEY" ]; then
     php artisan key:generate --force
