@@ -1,7 +1,7 @@
 # Use official PHP image with Apache
 FROM php:8.2-apache
 
-# Install system dependencies
+# Install system dependencies including SQLite
 RUN apt-get update && apt-get install -y \
     git \
     curl \
@@ -13,6 +13,8 @@ RUN apt-get update && apt-get install -y \
     nodejs \
     npm \
     libzip-dev \
+    libsqlite3-dev \
+    sqlite3 \
     && docker-php-ext-install pdo pdo_sqlite mbstring exif pcntl bcmath gd zip
 
 # Enable Apache mod_rewrite
@@ -32,6 +34,9 @@ RUN composer install --no-dev --optimize-autoloader
 
 # Install Node dependencies and build assets
 RUN npm install && npm run build
+
+# Create SQLite database directory
+RUN mkdir -p /var/data && touch /var/data/database.sqlite && chmod 777 /var/data/database.sqlite
 
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html \
