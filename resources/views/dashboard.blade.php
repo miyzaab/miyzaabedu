@@ -116,7 +116,7 @@
                             @for($i = 1; $i <= 4; $i++)
                                 <div
                                     class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold transition-all
-                                                    {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
+                                                        {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
                                     {{ $i }}
                                 </div>
                             @endfor
@@ -231,42 +231,120 @@
             </div>
             <div class="flex gap-4 overflow-x-auto px-5 pb-3 scrollbar-hide">
                 @php
-                    $audios = \App\Models\Audio::with('category')->take(3)->get();
+                    // Get user's in-progress audio (started but not completed)
+                    $userProgress = auth()->check()
+                        ? \App\Models\UserProgress::where('user_id', auth()->id())
+                            ->where('content_type', 'App\Models\Audio')
+                            ->where('status', '!=', 'completed')
+                            ->where('last_position', '>', 0)
+                            ->orderBy('updated_at', 'desc')
+                            ->take(3)
+                            ->get()
+                        : collect();
+
+                    // If user has progress, get those audios
+                    if ($userProgress->isNotEmpty()) {
+                        $audioIds = $userProgress->pluck('content_id');
+                        $audios = \App\Models\Audio::with('category')
+                            ->whereIn('id', $audioIds)
+                            ->get()
+                            ->keyBy('id');
+                    } else {
+                        // Fallback: show latest audios for new users
+                        $audios = \App\Models\Audio::with('category')->latest()->take(3)->get();
+                        $userProgress = collect();
+                    }
                 @endphp
-                @forelse($audios as $audio)
-                    <a href="{{ route('audio.play', $audio->id) }}"
-                        class="flex-shrink-0 w-48 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group">
-                        <div
-                            class="h-28 bg-gradient-to-br from-emerald-400 to-teal-500 relative flex items-center justify-center">
-                            <span
-                                class="absolute top-2 left-2 bg-emerald-700/50 backdrop-blur-md text-white text-[9px] px-2 py-0.5 rounded-full font-bold">Audio</span>
-                            <svg class="w-12 h-12 text-white/50 group-hover:scale-105 transition duration-300"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
-                                <path
-                                    d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
-                            </svg>
-                        </div>
-                        <div class="p-3">
-                            <h3 class="text-sm font-bold text-gray-900 line-clamp-1 mb-0.5">{{ $audio->title }}</h3>
-                            <p class="text-[10px] text-gray-500 mb-2 line-clamp-1">
-                                {{ $audio->category->name ?? 'Audio' }}
-                            </p>
-                            <div>
-                                <div class="w-full h-1.5 bg-gray-100 rounded-full">
-                                    <div class="h-full bg-emerald-500 rounded-full" style="width: 0%"></div>
-                                </div>
-                                <span class="text-[9px] text-gray-400 mt-1 block font-medium">0% Selesai</span>
+                @if($userProgress->isNotEmpty())
+                    @foreach($userProgress as $progress)
+                        @php
+                            $audio = $audios->get($progress->content_id);
+                            if (!$audio)
+                                continue;
+                            $duration = $audio->duration ?? 1;
+                            $progressPercent = $duration > 0 ? min(round(($progress->last_position / $duration) * 100), 99) : 0;
+                        @endphp
+                        <a href="{{ route('audio.play', $audio->id) }}"
+                            class="flex-shrink-0 w-48 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group">
+                            <div
+                                class="h-28 bg-gradient-to-br from-emerald-400 to-teal-500 relative flex items-center justify-center">
+                                <span
+                                    class="absolute top-2 left-2 bg-emerald-700/50 backdrop-blur-md text-white text-[9px] px-2 py-0.5 rounded-full font-bold">Audio</span>
+                                <svg class="w-12 h-12 text-white/50 group-hover:scale-105 transition duration-300"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                                    <path
+                                        d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                                </svg>
                             </div>
+                            <div class="p-3">
+                                <h3 class="text-sm font-bold text-gray-900 line-clamp-1 mb-0.5">{{ $audio->title }}</h3>
+                                <p class="text-[10px] text-gray-500 mb-2 line-clamp-1">
+                                    {{ $audio->category->name ?? 'Audio' }}
+                                </p>
+                                <div>
+                                    <div class="w-full h-1.5 bg-gray-100 rounded-full">
+                                        <div class="h-full bg-emerald-500 rounded-full" style="width: {{ $progressPercent }}%">
+                                        </div>
+                                    </div>
+                                    <span class="text-[9px] text-gray-400 mt-1 block font-medium">{{ $progressPercent }}%
+                                        Selesai</span>
+                                </div>
+                            </div>
+                        </a>
+                    @endforeach
+                @else
+                    @forelse($audios as $audio)
+                        @php
+                            // Check if logged in user has any progress for this audio
+                            $progress = auth()->check()
+                                ? \App\Models\UserProgress::where('user_id', auth()->id())
+                                    ->where('content_type', 'App\Models\Audio')
+                                    ->where('content_id', $audio->id)
+                                    ->first()
+                                : null;
+                            $duration = $audio->duration ?? 1;
+                            $progressPercent = $progress && $duration > 0
+                                ? min(round(($progress->last_position / $duration) * 100), 100)
+                                : 0;
+                        @endphp
+                        <a href="{{ route('audio.play', $audio->id) }}"
+                            class="flex-shrink-0 w-48 bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden group">
+                            <div
+                                class="h-28 bg-gradient-to-br from-emerald-400 to-teal-500 relative flex items-center justify-center">
+                                <span
+                                    class="absolute top-2 left-2 bg-emerald-700/50 backdrop-blur-md text-white text-[9px] px-2 py-0.5 rounded-full font-bold">Audio</span>
+                                <svg class="w-12 h-12 text-white/50 group-hover:scale-105 transition duration-300"
+                                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M3 18v-6a9 9 0 0 1 18 0v6" />
+                                    <path
+                                        d="M21 19a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3zM3 19a2 2 0 0 0 2 2h1a2 2 0 0 0 2-2v-3a2 2 0 0 0-2-2H3z" />
+                                </svg>
+                            </div>
+                            <div class="p-3">
+                                <h3 class="text-sm font-bold text-gray-900 line-clamp-1 mb-0.5">{{ $audio->title }}</h3>
+                                <p class="text-[10px] text-gray-500 mb-2 line-clamp-1">
+                                    {{ $audio->category->name ?? 'Audio' }}
+                                </p>
+                                <div>
+                                    <div class="w-full h-1.5 bg-gray-100 rounded-full">
+                                        <div class="h-full bg-emerald-500 rounded-full" style="width: {{ $progressPercent }}%">
+                                        </div>
+                                    </div>
+                                    <span class="text-[9px] text-gray-400 mt-1 block font-medium">{{ $progressPercent }}%
+                                        Selesai</span>
+                                </div>
+                            </div>
+                        </a>
+                    @empty
+                        <div
+                            class="flex-shrink-0 w-48 bg-gray-50 rounded-2xl p-6 text-center border-2 border-dashed border-gray-200">
+                            <p class="text-xs text-gray-400 font-medium">Belum ada materi</p>
                         </div>
-                    </a>
-                @empty
-                    <div
-                        class="flex-shrink-0 w-48 bg-gray-50 rounded-2xl p-6 text-center border-2 border-dashed border-gray-200">
-                        <p class="text-xs text-gray-400 font-medium">Belum ada materi</p>
-                    </div>
-                @endforelse
+                    @endforelse
+                @endif
             </div>
         </div>
 

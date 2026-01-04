@@ -194,7 +194,9 @@
             </a>
             <div class="flex items-center gap-6">
                 <!-- Theme Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none" aria-label="Toggle Dark Mode">
+                <button id="theme-toggle"
+                    class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none"
+                    aria-label="Toggle Dark Mode">
                     <span class="material-icons-round text-xl block dark:hidden">dark_mode</span>
                     <span class="material-icons-round text-xl hidden dark:block">light_mode</span>
                 </button>
@@ -226,7 +228,7 @@
                 <span class="text-sm font-medium text-emerald-800 dark:text-emerald-300">Platform Belajar Islam #1 di
                     Indonesia</span>
             </div>
-            <h1 class="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-8 tracking-tight"
+            <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6 md:mb-8 tracking-tight"
                 data-aos="fade-up">
                 Belajar Islam <br />
                 <span
@@ -265,14 +267,15 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto px-6 mt-32 mb-20">
-            <div class="grid lg:grid-cols-2 gap-16 items-center">
+        <section class="container mx-auto px-4 sm:px-6 mt-16 sm:mt-32 mb-12 sm:mb-20">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center">
                 <div class="space-y-8" data-aos="fade-right">
                     <div
                         class="inline-block px-4 py-1.5 rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 text-sm font-bold uppercase tracking-wider">
                         Tentang Kami
                     </div>
-                    <h2 class="text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
+                    <h2
+                        class="text-2xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight">
                         Membangun Generasi <br />
                         <span class="text-emerald-500">Berilmu &amp; Beradab</span>
                     </h2>
@@ -312,7 +315,7 @@
                         class="absolute inset-0 bg-gradient-to-tr from-emerald-500/20 to-teal-500/20 rounded-3xl transform rotate-3">
                     </div>
                     <div
-                        class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl relative border border-slate-100 dark:border-slate-700 overflow-hidden h-[500px]">
+                        class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl relative border border-slate-100 dark:border-slate-700 overflow-hidden h-[350px] sm:h-[500px]">
                         <div
                             class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white via-white/80 to-transparent dark:from-slate-800 dark:via-slate-800/80 z-10 flex items-center px-8">
                             <h3 class="font-bold text-xl text-slate-900 dark:text-white">Success Stories &amp; Benefits
@@ -472,9 +475,11 @@
                 </div>
             </div>
         </section>
-        <section class="container mx-auto px-6 mb-24">
-            <div class="flex justify-between items-end mb-10" data-aos="fade-right">
-                <h2 class="text-3xl md:text-4xl font-bold text-slate-800 dark:text-white">Fitur Unggulan</h2>
+        <section class="container mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8 sm:mb-10"
+                data-aos="fade-right">
+                <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-slate-800 dark:text-white">Fitur Unggulan
+                </h2>
                 <a class="text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300 font-medium text-sm md:text-base transition-colors flex items-center gap-1 group bg-emerald-50 dark:bg-emerald-900/30 px-4 py-2 rounded-lg"
                     href="#">
                     Lihat Semua
@@ -482,48 +487,48 @@
                         class="material-icons-round text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
                 </a>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
+            <div class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
                     data-aos="fade-up" data-aos-delay="0">
                     <div
-                        class="w-14 h-14 rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                        <span class="material-icons-round text-3xl">mic</span>
+                        class="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-purple-100 dark:bg-purple-900/30 text-purple-600 dark:text-purple-300 flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <span class="material-icons-round text-xl sm:text-3xl">mic</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-white">Audio</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-slate-800 dark:text-white">Audio</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed hidden sm:block">
                         Kajian audio terstruktur yang bisa didengarkan kapanpun.
                     </p>
                 </div>
-                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
+                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
                     data-aos="fade-up" data-aos-delay="100">
                     <div
-                        class="w-14 h-14 rounded-xl bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                        <span class="material-icons-round text-3xl">play_circle_filled</span>
+                        class="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-300 flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <span class="material-icons-round text-xl sm:text-3xl">play_circle_filled</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-white">Video</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-slate-800 dark:text-white">Video</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed hidden sm:block">
                         Tonton video kajian visual yang menarik dan interaktif.
                     </p>
                 </div>
-                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
+                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
                     data-aos="fade-up" data-aos-delay="200">
                     <div
-                        class="w-14 h-14 rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                        <span class="material-icons-round text-3xl">article</span>
+                        class="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-300 flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <span class="material-icons-round text-xl sm:text-3xl">article</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-white">Artikel</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-slate-800 dark:text-white">Artikel</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed hidden sm:block">
                         Baca tulisan ilmiah yang ringkas dan mudah dipahami.
                     </p>
                 </div>
-                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-2xl p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
+                <div class="group bg-white/60 dark:bg-slate-800/60 backdrop-blur-md rounded-xl sm:rounded-2xl p-4 sm:p-6 shadow-soft hover:shadow-xl dark:shadow-none border border-white/50 dark:border-white/5 transition-all duration-300 hover:-translate-y-2"
                     data-aos="fade-up" data-aos-delay="300">
                     <div
-                        class="w-14 h-14 rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-300 flex items-center justify-center mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
-                        <span class="material-icons-round text-3xl">quiz</span>
+                        class="w-10 h-10 sm:w-14 sm:h-14 rounded-lg sm:rounded-xl bg-yellow-100 dark:bg-yellow-900/30 text-yellow-600 dark:text-yellow-300 flex items-center justify-center mb-3 sm:mb-5 group-hover:scale-110 transition-transform duration-300 shadow-sm">
+                        <span class="material-icons-round text-xl sm:text-3xl">quiz</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-2 text-slate-800 dark:text-white">Kuis</h3>
-                    <p class="text-slate-500 dark:text-slate-400 text-sm leading-relaxed">
+                    <h3 class="text-base sm:text-xl font-bold mb-1 sm:mb-2 text-slate-800 dark:text-white">Kuis</h3>
+                    <p class="text-slate-500 dark:text-slate-400 text-xs sm:text-sm leading-relaxed hidden sm:block">
                         Uji pemahamanmu dengan kuis menarik di setiap sesi.
                     </p>
                 </div>
