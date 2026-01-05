@@ -186,13 +186,13 @@
     <header
         class="fixed w-full top-0 z-50 transition-all duration-300 backdrop-blur-md bg-white/10 dark:bg-slate-900/10 border-b border-white/20 dark:border-white/5"
         id="navbar">
-        <div class="container mx-auto px-6 h-20 flex items-center justify-between">
+        <div class="container mx-auto px-4 sm:px-6 h-16 sm:h-20 flex items-center justify-between">
             <a class="flex items-center gap-0 text-2xl font-bold tracking-tight text-slate-900 dark:text-white group"
                 href="#">
                 <span>Miyzaab</span><span
                     class="text-primary group-hover:scale-110 transition-transform duration-300 inline-block">Edu</span>
             </a>
-            <div class="flex items-center gap-6">
+            <div class="flex items-center gap-3 sm:gap-6">
                 <!-- Theme Toggle -->
                 <button id="theme-toggle"
                     class="p-2 rounded-full text-slate-600 dark:text-slate-300 hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors focus:outline-none"
@@ -203,7 +203,7 @@
 
                 <a class="hidden md:block font-medium text-slate-600 dark:text-slate-300 hover:text-primary dark:hover:text-primary transition-colors"
                     href="{{ route('login') }}">Masuk</a>
-                <a class="bg-primary hover:bg-primary-dark text-white px-6 py-2.5 rounded-full font-semibold shadow-glow transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
+                <a class="bg-primary hover:bg-primary-dark text-white px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base rounded-full font-semibold shadow-glow transition-all duration-300 transform hover:-translate-y-0.5 active:scale-95"
                     href="{{ route('register') }}">
                     Daftar
                 </a>
@@ -345,7 +345,7 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Guru Terpercaya</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pematri yang kompeten di
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pemateri yang kompeten di
                                         dalam bidangnya serta lulusan sekolah terbaik.</p>
                                 </div>
                                 <div
@@ -396,7 +396,8 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Guru Terpercaya</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pematri yang kompeten di dalam
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pemateri yang kompeten di
+                                        dalam
                                         bidangnya serta lulusan sekolah terbaik</p>
                                 </div>
                                 <div
