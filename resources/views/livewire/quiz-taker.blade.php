@@ -33,17 +33,17 @@
                 <div class="space-y-3">
                     @foreach($this->currentQuestion->options as $key => $value)
                         <div wire:click="selectAnswer({{ $this->currentQuestion->id }}, {{ $key }})" class="p-4 rounded-xl border-2 flex items-center cursor-pointer transition-all
-                                                                @if(isset($userAnswers[$this->currentQuestion->id]) && $userAnswers[$this->currentQuestion->id] == $key)
-                                                                    border-emerald-600 bg-emerald-50 shadow-md
-                                                                @else
-                                                                    border-gray-200 bg-white hover:bg-gray-50 hover:border-emerald-300
-                                                                @endif">
+                                                                            @if(isset($userAnswers[$this->currentQuestion->id]) && $userAnswers[$this->currentQuestion->id] == $key)
+                                                                                border-emerald-600 bg-emerald-50 shadow-md
+                                                                            @else
+                                                                                border-gray-200 bg-white hover:bg-gray-50 hover:border-emerald-300
+                                                                            @endif">
                             <div class="w-8 h-8 rounded-full border-2 flex items-center justify-center mr-4 font-bold
-                                                                @if(isset($userAnswers[$this->currentQuestion->id]) && $userAnswers[$this->currentQuestion->id] == $key)
-                                                                    border-emerald-600 text-emerald-600 bg-white
-                                                                @else
-                                                                    border-gray-400 text-gray-500
-                                                                @endif">
+                                                                            @if(isset($userAnswers[$this->currentQuestion->id]) && $userAnswers[$this->currentQuestion->id] == $key)
+                                                                                border-emerald-600 text-emerald-600 bg-white
+                                                                            @else
+                                                                                border-gray-400 text-gray-500
+                                                                            @endif">
                                 {{ chr(65 + $key) }}
                             </div>
                             <span class="text-gray-800 font-medium">{{ $value }}</span>
@@ -116,7 +116,7 @@
                         </svg>
                     </div>
                     <h2 class="text-2xl font-bold text-gray-800 mb-2">Afwan, Belum Lulus</h2>
-                    <p class="text-gray-600 mb-4">Nilai minimum: 60</p>
+                    <p class="text-gray-600 mb-4">Nilai minimum: {{ $quiz->passing_score ?? 75 }}</p>
 
                     <div class="text-5xl font-black text-red-500 mb-4">{{ $score }}<span
                             class="text-xl text-gray-400">/100</span></div>

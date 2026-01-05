@@ -106,16 +106,6 @@ class QuizTaker extends Component
         );
     }
 
-    public function retryQuiz()
-    {
-        $this->isFinished = false;
-        $this->currentQuestionIndex = 0;
-        $this->userAnswers = [];
-        $this->score = 0;
-        $this->passed = false;
-        $this->startTime = time();
-    }
-
     public function render()
     {
         return view('livewire.quiz-taker');
