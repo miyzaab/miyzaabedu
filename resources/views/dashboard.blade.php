@@ -116,7 +116,7 @@
                             @for($i = 1; $i <= 4; $i++)
                                 <div
                                     class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold transition-all
-                                                        {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
+                                                            {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
                                     {{ $i }}
                                 </div>
                             @endfor
@@ -414,12 +414,14 @@
         </div>
     </div>
 
-    <!-- Welcome Popup - Shows only for NEW users (account created within last 5 minutes) -->
+    <!-- Welcome Popup - Shows only for NEW users (first visit in session) -->
     @php
         $isNewUser = Auth::user()->created_at->diffInMinutes(now()) <= 5;
+        $hasSeenWelcome = session('miyzaab_welcome_seen_' . Auth::id(), false);
     @endphp
 
-    @if($isNewUser)
+    @if($isNewUser && !$hasSeenWelcome)
+        {{ session(['miyzaab_welcome_seen_' . Auth::id() => true]) }}
         <div x-data="welcomePopup()" x-show="showWelcome" x-cloak
             class="fixed inset-0 z-50 flex items-center justify-center p-4 overflow-y-auto"
             x-transition:enter="transition ease-out duration-300" x-transition:enter-start="opacity-0"
