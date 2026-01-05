@@ -40,7 +40,13 @@
                 </div>
                 <div>
                     <p class="text-xs text-gray-500 uppercase font-semibold">Durasi</p>
-                    <p class="text-xl font-bold text-gray-900">{{ $categories->count() * 45 }} Min</p>
+                    @php
+                        $totalSeconds = $categories->sum(function($cat) {
+                            return $cat->audios->sum('duration') ?? 0;
+                        });
+                        $totalMinutes = ceil($totalSeconds / 60);
+                    @endphp
+                    <p class="text-xl font-bold text-gray-900">{{ $totalMinutes }} Min</p>
                 </div>
             </div>
         </div>
@@ -88,7 +94,11 @@
                                     <span
                                         class="text-xs bg-gray-100 px-2 py-0.5 rounded text-gray-500">{{ $category->audios_count }}
                                         Audio</span>
-                                    <span class="text-xs text-gray-400">• 45 min</span>
+                                    @php
+                                        $categorySeconds = $category->audios->sum('duration') ?? 0;
+                                        $categoryMinutes = ceil($categorySeconds / 60);
+                                    @endphp
+                                    <span class="text-xs text-gray-400">• {{ $categoryMinutes }} min</span>
                                 </div>
                             </div>
                         </div>

@@ -31,6 +31,7 @@ class AudioLearningController extends Controller
         $categories = Category::where('type', 'audio')
             ->where('marhalah', $level)
             ->withCount('audios')
+            ->with('audios')
             ->orderBy('name')
             ->get();
 
