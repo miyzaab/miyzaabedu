@@ -220,9 +220,21 @@
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const overlay = document.getElementById('sidebar-overlay');
 
+        // FORCE HIDE SIDEBAR ON MOBILE - runs immediately
+        (function () {
+            if (window.innerWidth < 1024) {
+                sidebar.style.transform = 'translateX(-100%)';
+            }
+        })();
+
         function toggleSidebar() {
-            sidebar.classList.toggle('sidebar-open');
-            overlay.classList.toggle('hidden');
+            if (sidebar.style.transform === 'translateX(-100%)' || sidebar.style.transform === '') {
+                sidebar.style.transform = 'translateX(0)';
+                overlay.classList.remove('hidden');
+            } else {
+                sidebar.style.transform = 'translateX(-100%)';
+                overlay.classList.add('hidden');
+            }
         }
 
         if (sidebarToggle) {
@@ -237,8 +249,8 @@
         const sidebarLinks = sidebar.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 1024) { // lg breakpoint
-                    sidebar.classList.remove('sidebar-open');
+                if (window.innerWidth < 1024) {
+                    sidebar.style.transform = 'translateX(-100%)';
                     overlay.classList.add('hidden');
                 }
             });
