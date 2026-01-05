@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>MiyzaabEdu - Belajar Islam Lebih Menyenangkan</title>
+    <title>MiyzaabEdu - Belajar Islam Lebih Terstruktur</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -225,20 +225,20 @@
                         class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                     <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
                 </span>
-                <span class="text-sm font-medium text-emerald-800 dark:text-emerald-300">Platform Belajar Islam #1 di
-                    Indonesia</span>
+                <span class="text-sm font-medium text-emerald-800 dark:text-emerald-300">Platform Belajar Islam
+                </span>
             </div>
             <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6 md:mb-8 tracking-tight"
                 data-aos="fade-up">
                 Belajar Islam <br />
                 <span
-                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">Lebih
-                    Menyenangkan</span>
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">
+                    Melalui digital</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 data-aos="fade-up" data-aos-delay="100">
                 Jelajahi samudra ilmu dengan metode modern. Kurikulum terstruktur, audio learning jernih, dan kuis
-                interaktif untuk menemani perjalanan hijrahmu setiap hari.
+                interaktif untuk menemani perjalanan belajarmu setiap hari.
             </p>
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center" data-aos="fade-up"
                 data-aos-delay="200">
@@ -280,7 +280,7 @@
                         <span class="text-emerald-500">Berilmu &amp; Beradab</span>
                     </h2>
                     <p class="text-lg text-slate-600 dark:text-slate-300 leading-relaxed">
-                        MiyzaabEdu hadir sebagai jembatan ilmu yang menghubungkan tradisi keilmuan Islam otentik dengan
+                        MiyzaabEdu hadir sebagai jembatan ilmu yang menghubungkan keilmuan Islam dengan
                         kemudahan teknologi masa kini.
                     </p>
                     <div class="grid gap-6 mt-4">
@@ -293,7 +293,7 @@
                             <div>
                                 <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-1">Visi Kami</h3>
                                 <p class="text-slate-600 dark:text-slate-400 text-sm">Menjadi platform edukasi Islam
-                                    terdepan yang mencetak muslim moderat, cerdas, dan berkarakter.</p>
+                                    terdepan yang berkiblat kepada Al-Qur'an dan As-Sunnah.</p>
                             </div>
                         </div>
                         <div
@@ -304,8 +304,8 @@
                             </div>
                             <div>
                                 <h3 class="font-bold text-xl text-slate-900 dark:text-white mb-1">Misi Kami</h3>
-                                <p class="text-slate-600 dark:text-slate-400 text-sm">Menyajikan konten dakwah yang
-                                    ilmiah, mudah diakses, serta relevan dengan tantangan zaman.</p>
+                                <p class="text-slate-600 dark:text-slate-400 text-sm">Menyajikan konten belajar Islam
+                                    yang ilmiah, mudah diakses, serta relevan dengan tantangan zaman.</p>
                             </div>
                         </div>
                     </div>
@@ -318,7 +318,7 @@
                         class="bg-white dark:bg-slate-800 rounded-3xl shadow-xl relative border border-slate-100 dark:border-slate-700 overflow-hidden h-[350px] sm:h-[500px]">
                         <div
                             class="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-white via-white/80 to-transparent dark:from-slate-800 dark:via-slate-800/80 z-10 flex items-center px-8">
-                            <h3 class="font-bold text-xl text-slate-900 dark:text-white">Success Stories &amp; Benefits
+                            <h3 class="font-bold text-xl text-slate-900 dark:text-white">Fitur Unggulan &amp; Benefits
                             </h3>
                         </div>
                         <div class="animate-scroll-vertical w-full">
@@ -333,8 +333,8 @@
                                         <span class="font-bold text-slate-800 dark:text-white">Kurikulum
                                             Terstruktur</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Alhamdulillah, belajarnya
-                                        jadi runut dan tidak bingung harus mulai dari mana."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Dimulai dari kitab-kitab dasar
+                                        yang disarankan oleh para Ulama.</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -343,10 +343,10 @@
                                             <span
                                                 class="material-icons-round text-teal-600 dark:text-teal-400">verified_user</span>
                                         </div>
-                                        <span class="font-bold text-slate-800 dark:text-white">Ustadz Terpercaya</span>
+                                        <span class="font-bold text-slate-800 dark:text-white">Guru Terpercaya</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Pemateri sangat kompeten dan
-                                        menyampaikannya dengan bahasa yang mudah dipahami."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pematri yang kompeten di
+                                        dalam bidangnya serta lulusan sekolah terbaik.</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -357,8 +357,8 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Fleksibel 24 Jam</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Sebagai pekerja, fitur ini
-                                        sangat membantu saya belajar di sela-sela kesibukan."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Fitur yang membantu anda untuk
+                                        belajar kapapun Anda mau.</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -369,8 +369,8 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Komunitas Aktif</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Senang bisa bertemu
-                                        teman-teman hijrah yang saling menyemangati."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Saling bertukar fikiran dengan
+                                        teman-teman lainnya.</p>
                                 </div>
                             </div>
                             <div class="space-y-4 px-6 pt-4 pb-24">
@@ -384,8 +384,8 @@
                                         <span class="font-bold text-slate-800 dark:text-white">Kurikulum
                                             Terstruktur</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Alhamdulillah, belajarnya
-                                        jadi runut dan tidak bingung harus mulai dari mana."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Dimulai dari kitab-kitab dasar
+                                        yang disarankan oleh para Ulama.</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -394,10 +394,10 @@
                                             <span
                                                 class="material-icons-round text-teal-600 dark:text-teal-400">verified_user</span>
                                         </div>
-                                        <span class="font-bold text-slate-800 dark:text-white">Ustadz Terpercaya</span>
+                                        <span class="font-bold text-slate-800 dark:text-white">Guru Terpercaya</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Pemateri sangat kompeten dan
-                                        menyampaikannya dengan bahasa yang mudah dipahami."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Pematri yang kompeten di dalam
+                                        bidangnya serta lulusan sekolah terbaik</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -408,8 +408,8 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Fleksibel 24 Jam</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Sebagai pekerja, fitur ini
-                                        sangat membantu saya belajar di sela-sela kesibukan."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Fitur yang membantu anda untuk
+                                        belajar kapapun Anda mau.</p>
                                 </div>
                                 <div
                                     class="bg-slate-50 dark:bg-slate-700/50 p-6 rounded-2xl hover:-translate-y-1 transition-transform duration-300 border border-slate-100 dark:border-slate-600">
@@ -420,8 +420,8 @@
                                         </div>
                                         <span class="font-bold text-slate-800 dark:text-white">Komunitas Aktif</span>
                                     </div>
-                                    <p class="text-sm text-slate-600 dark:text-slate-300">"Senang bisa bertemu
-                                        teman-teman hijrah yang saling menyemangati."</p>
+                                    <p class="text-sm text-slate-600 dark:text-slate-300">Saling bertukar fikiran dengan
+                                        teman-teman lainnya.</p>
                                 </div>
                             </div>
                         </div>
@@ -449,31 +449,94 @@
                         <span class="material-icons-round text-sm">bolt</span>
                         Mutiara Hari Ini
                     </div>
-                    <blockquote
-                        class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
-                        "Ilmu itu lebih baik daripada harta. Ilmu menjaga engkau dan engkau menjaga harta."
-                    </blockquote>
-                    <div class="flex items-center justify-between w-full pt-4 border-t border-white/10">
-                        <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
-                            <div
-                                class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
-                                A</div>
-                            Ali bin Abi Thalib
-                        </cite>
-                        <div class="flex gap-2">
-                            <div
-                                class="w-2.5 h-2.5 rounded-full bg-white opacity-100 shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-                            </div>
-                            <div
-                                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-                            </div>
-                            <div
-                                class="w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity cursor-pointer">
-                            </div>
+
+                    <!-- Slider Container -->
+                    <div id="quote-slider" class="w-full relative min-h-[180px] md:min-h-[150px]">
+                        <!-- Slide 1 -->
+                        <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-100">
+                            <blockquote
+                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                "Ilmu itu lebih baik daripada harta. Ilmu menjaga engkau dan engkau menjaga harta."
+                            </blockquote>
+                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    A</div>
+                                Ali bin Abi Thalib
+                            </cite>
+                        </div>
+
+                        <!-- Slide 2 -->
+                        <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <blockquote
+                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                "Barangsiapa menempuh jalan untuk mencari ilmu, Allah akan mudahkan baginya jalan menuju
+                                surga."
+                            </blockquote>
+                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    ﷺ</div>
+                                Rasulullah ﷺ (HR. Muslim)
+                            </cite>
+                        </div>
+
+                        <!-- Slide 3 -->
+                        <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-0">
+                            <blockquote
+                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                "Sampaikanlah dariku walau hanya satu ayat."
+                            </blockquote>
+                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                                <div
+                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    ﷺ</div>
+                                Rasulullah ﷺ (HR. Bukhari)
+                            </cite>
+                        </div>
+                    </div>
+
+                    <!-- Dots Indicator -->
+                    <div class="flex items-center justify-between w-full pt-4 border-t border-white/10 mt-4">
+                        <div class="text-sm text-emerald-100/70"> </div>
+                        <div class="flex gap-2" id="quote-dots">
+                            <button onclick="goToSlide(0)"
+                                class="quote-dot w-2.5 h-2.5 rounded-full bg-white opacity-100 shadow-[0_0_10px_rgba(255,255,255,0.8)] transition-opacity"></button>
+                            <button onclick="goToSlide(1)"
+                                class="quote-dot w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity cursor-pointer"></button>
+                            <button onclick="goToSlide(2)"
+                                class="quote-dot w-2.5 h-2.5 rounded-full bg-white opacity-40 hover:opacity-100 transition-opacity cursor-pointer"></button>
                         </div>
                     </div>
                 </div>
             </div>
+
+            <script>
+                let currentSlide = 0;
+                const slides = document.querySelectorAll('.quote-slide');
+                const dots = document.querySelectorAll('.quote-dot');
+
+                function goToSlide(index) {
+                    slides[currentSlide].classList.remove('opacity-100');
+                    slides[currentSlide].classList.add('opacity-0');
+                    dots[currentSlide].classList.remove('opacity-100', 'shadow-[0_0_10px_rgba(255,255,255,0.8)]');
+                    dots[currentSlide].classList.add('opacity-40');
+
+                    currentSlide = index;
+
+                    slides[currentSlide].classList.remove('opacity-0');
+                    slides[currentSlide].classList.add('opacity-100');
+                    dots[currentSlide].classList.remove('opacity-40');
+                    dots[currentSlide].classList.add('opacity-100', 'shadow-[0_0_10px_rgba(255,255,255,0.8)]');
+                }
+
+                function nextSlide() {
+                    goToSlide((currentSlide + 1) % slides.length);
+                }
+
+                // Auto-slide every 5 seconds
+                setInterval(nextSlide, 5000);
+            </script>
         </section>
         <section class="container mx-auto px-4 sm:px-6 mb-16 sm:mb-24">
             <div class="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8 sm:mb-10"
@@ -552,8 +615,7 @@
                     </summary>
                     <div
                         class="px-6 pb-6 text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 pt-4">
-                        Sebagian besar materi dasar kami sediakan secara gratis. Untuk akses ke kelas intensif dan fitur
-                        premium seperti bimbingan personal, tersedia paket langganan yang terjangkau.
+                        Sebagian besar materi dasar kami sediakan secara gratis tanpa berbayar.
                     </div>
                 </details>
                 <details
@@ -596,8 +658,8 @@
                     </summary>
                     <div
                         class="px-6 pb-6 text-slate-600 dark:text-slate-300 leading-relaxed border-t border-slate-100 dark:border-slate-700/50 pt-4">
-                        Kami menggunakan metode *blended learning* yang menggabungkan kajian kitab klasik (turats)
-                        dengan pendekatan pedagogi modern yang interaktif dan mudah dipahami.
+                        Kami menggunakan metode *blended learning* yang menggabungkan kajian kitab
+                        dengan pendekatan modern yang interaktif dan mudah dipahami.
                     </div>
                 </details>
             </div>
@@ -616,7 +678,7 @@
                             kami siap membantu menjawab pertanyaan seputar materi atau teknis platform.</p>
                     </div>
                     <a class="flex items-center gap-3 bg-emerald-500 hover:bg-emerald-600 text-white font-bold py-4 px-8 rounded-full transition-all duration-300 shadow-lg shadow-emerald-500/25 transform hover:-translate-y-1 group"
-                        href="https://wa.me/yournumber" target="_blank">
+                        href="https://wa.me/085161120715" target="_blank">
                         <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                             <path
                                 d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z">
