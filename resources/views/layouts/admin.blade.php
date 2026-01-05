@@ -63,9 +63,13 @@
 
 <body
     class="font-display bg-background-light dark:bg-background-dark text-gray-800 dark:text-gray-100 transition-colors duration-200">
-    <div class="flex h-screen overflow-hidden">
-        <aside
-            class="w-64 flex-shrink-0 flex flex-col bg-gradient-sidebar dark:from-gray-900 dark:to-gray-900 border-r border-gray-700 dark:border-gray-800 transition-all duration-300 relative overflow-hidden">
+    <div class="flex h-screen overflow-hidden bg-background-light dark:bg-background-dark relative">
+        <!-- Mobile Overlay -->
+        <div id="sidebar-overlay"
+            class="fixed inset-0 bg-black/50 z-20 hidden md:hidden backdrop-blur-sm transition-opacity"></div>
+
+        <aside id="sidebar"
+            class="w-64 flex flex-col bg-gradient-sidebar dark:from-gray-900 dark:to-gray-900 border-r border-gray-700 dark:border-gray-800 transition-transform duration-300 fixed md:relative inset-y-0 left-0 z-30 -translate-x-full md:translate-x-0 overflow-hidden shadow-xl md:shadow-none">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <div class="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-emerald-400 blur-3xl"></div>
                 <div class="absolute top-1/2 -right-24 w-48 h-48 rounded-full bg-teal-400 blur-3xl"></div>
@@ -140,9 +144,14 @@
         </aside>
         <main class="flex-1 flex flex-col h-screen overflow-y-auto">
             <header
-                class="h-16 bg-card-light dark:bg-gray-800 shadow-sm flex items-center justify-between px-6 lg:px-8 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
+                class="h-16 bg-card-light dark:bg-gray-800 shadow-sm flex items-center justify-between px-4 sm:px-6 lg:px-8 border-b border-gray-200 dark:border-gray-700 sticky top-0 z-10 backdrop-blur-md bg-opacity-90 dark:bg-opacity-90">
                 <div class="flex items-center">
-                    <h1 class="text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Dashboard Admin</h1>
+                    <button id="sidebar-toggle"
+                        class="md:hidden mr-3 text-gray-500 hover:text-primary focus:outline-none transition-colors">
+                        <span class="material-icons-outlined text-2xl">menu</span>
+                    </button>
+                    <h1 class="text-lg sm:text-2xl font-bold text-gray-900 dark:text-white tracking-tight">Dashboard
+                        Admin</h1>
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="hidden md:flex relative group">
@@ -182,8 +191,35 @@
     <script>
         const toggleButton = document.querySelector('button[title="Toggle Theme"]') || document.querySelector(
             '.material-icons-outlined:contains("dark_mode")')?.parentNode;
-        // Simple script to make sidebar links active on click for demo feel
-        // In real app, use request()->routeIs() for active states.
+
+        // Mobile Sidebar Toggle
+        const sidebar = document.getElementById('sidebar');
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const overlay = document.getElementById('sidebar-overlay');
+
+        function toggleSidebar() {
+            sidebar.classList.toggle('-translate-x-full');
+            overlay.classList.toggle('hidden');
+        }
+
+        if (sidebarToggle) {
+            sidebarToggle.addEventListener('click', toggleSidebar);
+        }
+
+        if (overlay) {
+            overlay.addEventListener('click', toggleSidebar);
+        }
+
+        // Close sidebar when clicking a link on mobile
+        const sidebarLinks = sidebar.querySelectorAll('a');
+        sidebarLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                if (window.innerWidth < 768) { // md breakpoint
+                    sidebar.classList.add('-translate-x-full');
+                    overlay.classList.add('hidden');
+                }
+            });
+        });
     </script>
 </body>
 
