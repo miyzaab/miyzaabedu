@@ -106,7 +106,7 @@
                             <span class="text-4xl font-extrabold tracking-tight">{{ $ranking }}</span>
                             @if($ranking !== '-')
                                 <span class="text-sm text-emerald-200 font-medium">dari {{ $allUserScores->count() }}
-                                    santri</span>
+                                    peserta</span>
                             @endif
                         </div>
                     </div>
@@ -116,7 +116,7 @@
                             @for($i = 1; $i <= 4; $i++)
                                 <div
                                     class="w-7 h-7 rounded-lg flex items-center justify-center text-xs font-bold transition-all
-                                                            {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
+                                                                {{ $i <= $marhalah ? 'bg-white text-emerald-600 shadow-md' : 'bg-white/20 text-white/60' }}">
                                     {{ $i }}
                                 </div>
                             @endfor

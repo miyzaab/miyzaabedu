@@ -91,7 +91,7 @@
         <div id="sidebar-overlay"
             class="fixed inset-0 bg-black/50 z-20 hidden md:hidden backdrop-blur-sm transition-opacity"></div>
 
-        <aside id="sidebar"
+        <aside id="sidebar" style="transform: translateX(-100%);"
             class="w-64 flex flex-col bg-gradient-sidebar dark:from-gray-900 dark:to-gray-900 border-r border-gray-700 dark:border-gray-800 transition-transform duration-300 fixed inset-y-0 left-0 z-30 overflow-hidden shadow-xl">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <div class="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-emerald-400 blur-3xl"></div>
@@ -220,9 +220,14 @@
         const sidebarToggle = document.getElementById('sidebar-toggle');
         const overlay = document.getElementById('sidebar-overlay');
 
-        // FORCE HIDE SIDEBAR ON MOBILE - runs immediately
+        // FORCE: Show sidebar on desktop, hide on mobile
         (function () {
-            if (window.innerWidth < 1024) {
+            if (window.innerWidth >= 1024) {
+                // Desktop: show sidebar
+                sidebar.style.transform = 'translateX(0)';
+                sidebar.style.position = 'relative';
+            } else {
+                // Mobile: hide sidebar
                 sidebar.style.transform = 'translateX(-100%)';
             }
         })();
