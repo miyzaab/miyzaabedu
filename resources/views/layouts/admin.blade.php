@@ -60,18 +60,25 @@
         }
     </style>
     <style>
-        /* Mobile/Tablet sidebar - hidden by default */
-        @media (max-width: 1023px) {
+        /* Sidebar hidden by default on mobile/tablet */
+        #sidebar {
+            transform: translateX(-100%);
+        }
+
+        /* Show sidebar when open (mobile) */
+        #sidebar.sidebar-open {
+            transform: translateX(0);
+        }
+
+        /* Desktop: always show sidebar */
+        @media (min-width: 1024px) {
             #sidebar {
-                transform: translateX(-100%) !important;
-            }
-
-            #sidebar.sidebar-open {
                 transform: translateX(0) !important;
+                position: relative !important;
             }
 
-            #sidebar-overlay.show {
-                display: block !important;
+            #sidebar-toggle {
+                display: none !important;
             }
         }
     </style>
@@ -85,7 +92,7 @@
             class="fixed inset-0 bg-black/50 z-20 hidden md:hidden backdrop-blur-sm transition-opacity"></div>
 
         <aside id="sidebar"
-            class="w-64 flex flex-col bg-gradient-sidebar dark:from-gray-900 dark:to-gray-900 border-r border-gray-700 dark:border-gray-800 transition-transform duration-300 fixed md:relative inset-y-0 left-0 z-30 -translate-x-full md:translate-x-0 overflow-hidden shadow-xl md:shadow-none">
+            class="w-64 flex flex-col bg-gradient-sidebar dark:from-gray-900 dark:to-gray-900 border-r border-gray-700 dark:border-gray-800 transition-transform duration-300 fixed inset-y-0 left-0 z-30 overflow-hidden shadow-xl">
             <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none opacity-20">
                 <div class="absolute -top-24 -left-24 w-64 h-64 rounded-full bg-emerald-400 blur-3xl"></div>
                 <div class="absolute top-1/2 -right-24 w-48 h-48 rounded-full bg-teal-400 blur-3xl"></div>
