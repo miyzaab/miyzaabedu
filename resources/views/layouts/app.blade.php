@@ -52,18 +52,9 @@
                             x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95"
                             class="absolute top-12 right-0 w-48 bg-white rounded-xl shadow-lg border border-gray-100 py-1 z-50">
 
-                            <div class="px-4 py-3 border-b border-gray-100 flex items-center justify-between">
-                                <div>
-                                    <p class="text-sm text-gray-900 font-medium truncate">{{ Auth::user()->name }}</p>
-                                    <p class="text-xs text-gray-500 truncate">{{ Auth::user()->email }}</p>
-                                </div>
-                                <button @click="open = false" class="p-1 hover:bg-gray-100 rounded-full">
-                                    <svg class="w-4 h-4 text-gray-400" fill="none" stroke="currentColor"
-                                        viewBox="0 0 24 24">
-                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                            d="M6 18L18 6M6 6l12 12" />
-                                    </svg>
-                                </button>
+                            <div class="px-4 py-3 border-b border-gray-100">
+                                <p class="text-sm text-gray-900 font-medium truncate">{{ Auth::user()->name }}</p>
+                                <p class="text-xs text-gray-500 truncate">{{ Auth::user()->email }}</p>
                             </div>
 
                             <a href="{{ route('settings.index') }}"
