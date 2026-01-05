@@ -2,6 +2,8 @@
 <html lang="id">
 
 <head>
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>MiyzaabEdu - Belajar Islam Lebih Terstruktur</title>
@@ -435,7 +437,7 @@
         </section>
         <section class="container mx-auto px-6 mt-24 mb-20" data-aos="zoom-in-up">
             <div
-                class="relative bg-gradient-to-br from-emerald-500 to-teal-600 rounded-3xl p-8 md:p-12 overflow-hidden shadow-2xl shadow-emerald-500/20 text-white transform hover:scale-[1.01] transition-transform duration-500 border border-white/10">
+                class="relative bg-gradient-to-br from-emerald-500 to-teal-600 rounded-2xl sm:rounded-3xl p-4 sm:p-8 md:p-12 overflow-hidden shadow-2xl shadow-emerald-500/20 text-white transform hover:scale-[1.01] transition-transform duration-500 border border-white/10">
                 <div class="absolute top-0 right-0 opacity-10 pointer-events-none mix-blend-overlay">
                     <svg height="400" viewBox="0 0 200 200" width="400" xmlns="http://www.w3.org/2000/svg">
                         <path
@@ -444,24 +446,25 @@
                     </svg>
                 </div>
                 <div
-                    class="relative z-10 flex flex-col items-start max-w-3xl backdrop-blur-sm bg-white/5 p-6 rounded-2xl border border-white/10">
+                    class="relative z-10 flex flex-col items-start max-w-3xl backdrop-blur-sm bg-white/5 p-4 sm:p-6 rounded-xl sm:rounded-2xl border border-white/10">
                     <div
-                        class="flex items-center gap-2 mb-6 text-emerald-100 uppercase tracking-widest text-xs font-bold bg-white/10 px-3 py-1 rounded-full w-max">
+                        class="flex items-center gap-2 mb-4 sm:mb-6 text-emerald-100 uppercase tracking-widest text-xs font-bold bg-white/10 px-3 py-1 rounded-full w-max">
                         <span class="material-icons-round text-sm">bolt</span>
                         Mutiara Hari Ini
                     </div>
 
                     <!-- Slider Container -->
-                    <div id="quote-slider" class="w-full relative min-h-[180px] md:min-h-[150px]">
+                    <div id="quote-slider" class="w-full relative min-h-[220px] sm:min-h-[180px] md:min-h-[150px]">
                         <!-- Slide 1 -->
                         <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-100">
                             <blockquote
-                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-6 sm:mb-8 drop-shadow-sm">
                                 "Ilmu itu lebih baik daripada harta. Ilmu menjaga engkau dan engkau menjaga harta."
                             </blockquote>
-                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                            <cite
+                                class="not-italic font-semibold text-emerald-50 text-base sm:text-lg flex items-center gap-2 sm:gap-3">
                                 <div
-                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                                     A</div>
                                 Ali bin Abi Thalib
                             </cite>
@@ -470,13 +473,14 @@
                         <!-- Slide 2 -->
                         <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-0">
                             <blockquote
-                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-6 sm:mb-8 drop-shadow-sm">
                                 "Barangsiapa menempuh jalan untuk mencari ilmu, Allah akan mudahkan baginya jalan menuju
                                 surga."
                             </blockquote>
-                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                            <cite
+                                class="not-italic font-semibold text-emerald-50 text-base sm:text-lg flex items-center gap-2 sm:gap-3">
                                 <div
-                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                                     ﷺ</div>
                                 Rasulullah ﷺ (HR. Muslim)
                             </cite>
@@ -485,12 +489,13 @@
                         <!-- Slide 3 -->
                         <div class="quote-slide absolute inset-0 transition-opacity duration-700 opacity-0">
                             <blockquote
-                                class="font-serif text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-8 drop-shadow-sm">
+                                class="font-serif text-lg sm:text-2xl md:text-3xl lg:text-4xl leading-relaxed italic mb-6 sm:mb-8 drop-shadow-sm">
                                 "Sampaikanlah dariku walau hanya satu ayat."
                             </blockquote>
-                            <cite class="not-italic font-semibold text-emerald-50 text-lg flex items-center gap-3">
+                            <cite
+                                class="not-italic font-semibold text-emerald-50 text-base sm:text-lg flex items-center gap-2 sm:gap-3">
                                 <div
-                                    class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold">
+                                    class="w-8 h-8 sm:w-10 sm:h-10 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-sm sm:text-base">
                                     ﷺ</div>
                                 Rasulullah ﷺ (HR. Bukhari)
                             </cite>
@@ -498,7 +503,8 @@
                     </div>
 
                     <!-- Dots Indicator -->
-                    <div class="flex items-center justify-between w-full pt-4 border-t border-white/10 mt-4">
+                    <div
+                        class="flex items-center justify-end w-full pt-3 sm:pt-4 border-t border-white/10 mt-3 sm:mt-4">
                         <div class="text-sm text-emerald-100/70"> </div>
                         <div class="flex gap-2" id="quote-dots">
                             <button onclick="goToSlide(0)"
