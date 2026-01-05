@@ -40,15 +40,16 @@ class QuizController extends Controller
     {
         $userId = Auth::id();
 
-        // First check if user has already completed this quiz
+        // Check if user has already attempted this quiz (regardless of pass/fail)
         $quizResult = UserProgress::where('user_id', $userId)
             ->where('content_type', Quiz::class)
             ->where('content_id', $quiz->id)
             ->first();
 
-        $hasCompleted = $quizResult && $quizResult->status === 'completed';
+        // Block retake if quiz was already attempted
+        $hasCompleted = $quizResult !== null;
 
-        // If quiz is already completed, show results directly (skip audio check)
+        // If quiz is already attempted, show results directly (no retake)
         if ($hasCompleted) {
             return view('quiz.show', compact('quiz', 'hasCompleted', 'quizResult'));
         }
