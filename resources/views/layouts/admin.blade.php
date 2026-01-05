@@ -60,13 +60,18 @@
         }
     </style>
     <style>
-        /* Mobile sidebar - hidden by default */
-        @media (max-width: 767px) {
+        /* Mobile/Tablet sidebar - hidden by default */
+        @media (max-width: 1023px) {
             #sidebar {
                 transform: translateX(-100%) !important;
             }
+
             #sidebar.sidebar-open {
                 transform: translateX(0) !important;
+            }
+
+            #sidebar-overlay.show {
+                display: block !important;
             }
         }
     </style>
@@ -225,7 +230,7 @@
         const sidebarLinks = sidebar.querySelectorAll('a');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) { // md breakpoint
+                if (window.innerWidth < 1024) { // lg breakpoint
                     sidebar.classList.remove('sidebar-open');
                     overlay.classList.add('hidden');
                 }
