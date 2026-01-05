@@ -59,6 +59,17 @@
             }
         }
     </style>
+    <style>
+        /* Mobile sidebar - hidden by default */
+        @media (max-width: 767px) {
+            #sidebar {
+                transform: translateX(-100%) !important;
+            }
+            #sidebar.sidebar-open {
+                transform: translateX(0) !important;
+            }
+        }
+    </style>
 </head>
 
 <body
@@ -198,7 +209,7 @@
         const overlay = document.getElementById('sidebar-overlay');
 
         function toggleSidebar() {
-            sidebar.classList.toggle('-translate-x-full');
+            sidebar.classList.toggle('sidebar-open');
             overlay.classList.toggle('hidden');
         }
 
@@ -215,7 +226,7 @@
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth < 768) { // md breakpoint
-                    sidebar.classList.add('-translate-x-full');
+                    sidebar.classList.remove('sidebar-open');
                     overlay.classList.add('hidden');
                 }
             });
