@@ -6,7 +6,7 @@
         href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>MiyzaabEdu - Belajar Islam Lebih Terstruktur</title>
+    <title>MiyzaabEdu - Platform Edukasi Islam Digital</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
     <link href="https://fonts.googleapis.com" rel="preconnect" />
     <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
@@ -232,15 +232,15 @@
             </div>
             <h1 class="text-3xl sm:text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight mb-6 md:mb-8 tracking-tight"
                 data-aos="fade-up">
-                Belajar Islam <br />
+                Platform Ekukasi <br />
                 <span
                     class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-600 to-teal-500 dark:from-emerald-400 dark:to-teal-300">
-                    Melalui digital</span>
+                    Islam Digital</span>
             </h1>
             <p class="text-lg md:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed"
                 data-aos="fade-up" data-aos-delay="100">
-                Jelajahi samudra ilmu dengan metode modern. Kurikulum terstruktur, audio learning jernih, dan kuis
-                interaktif untuk menemani perjalanan belajarmu setiap hari.
+                Jelajahi samudra ilmu dengan metode modern dan digital. Kurikulum terstruktur, audio learning jernih,
+                dan dapat diakses 24 jam menyesuaikan waktu Anda.
             </p>
             <div class="flex flex-col sm:flex-row gap-5 justify-center items-center" data-aos="fade-up"
                 data-aos-delay="200">
